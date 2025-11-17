@@ -24,7 +24,7 @@ switch (action.type){
     case "DELETE_ALL" :
     return {...state , contacts:state.contacts.filter((_,i)=> !action.payload.includes(i))}
    
-   
+   default:
 }
 }
 
