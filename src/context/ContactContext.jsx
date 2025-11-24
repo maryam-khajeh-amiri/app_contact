@@ -2,6 +2,9 @@ import {  createContext, useReducer ,useState} from "react"
 import ContactForm from "../components/ContactForm"
 import ContactItem from "../components/ContactItem"
 import SearchBar from "../components/SearchBar"
+import ContactList from "../components/ContactList"
+import { reach } from "yup"
+
 
 
 export const userContext = createContext()
@@ -24,6 +27,9 @@ switch (action.type){
     case "DELETE_ALL" :
     return {...state , contacts:state.contacts.filter((_,i)=> !action.payload.includes(i))}
    
+    case  "JSON" :
+    return {...state , contacts:[...state.contacts , ...action.payload]}
+
    default:
 }
 }
@@ -56,16 +62,24 @@ const saveEdit =(index,updateContact)=>{
      setSelectedIndex([])
  }
 
+ const jsonContact=(dataJson)=>{
+    dispatch({type:"JSON" , payload:dataJson})
+ }
+
 
 
 
 
   return (
     <div> 
-         <userContext.Provider value={{ addContact,search,setSearch,contacts:state.contacts,deleteContact,editContact,editIndex:state.editIndex,saveEdit,selectedIndex,setSelectedIndex,deleteAll}}>
+         <userContext.Provider value={{ addContact,
+            search,setSearch,contacts:state.contacts,deleteContact,
+            editContact,editIndex:state.editIndex,saveEdit,
+            selectedIndex,setSelectedIndex,deleteAll ,jsonContact}}>
           <SearchBar />
           <ContactForm />
           <ContactItem />
+          <ContactList />
          
          
         </userContext.Provider>

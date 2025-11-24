@@ -1,16 +1,39 @@
-# React + Vite
+The name of this project is Contact App.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In this project, I developed several features such as adding, deleting, and editing contacts. The user can also search contacts by name. I also added a Delete All button that allows the user to remove all the saved contacts at once.
 
-Currently, two official plugins are available:
+the list af feature in this app:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+.Add contact
 
-## React Compiler
+.Delete all contacts
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+.Delete a specific contact
 
-## Expanding the ESLint configuration
+.Edit a specific contact
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+.Search by name
+
+.Validation
+
+.React Context
+
+.useReducer
+
+To run this project, we need Node.js.
+After installing Node.js, check the versions using the following commands:node -v
+npm -v
+
+We can use Vite to create a React project.
+Open the terminal and run:
+
+npm create vite@latest
+cd my-app
+npm install
+npm run dev
+
+
+In this project, I used React Context API, JSON Server, and useReducer.
+
+
+One of the reasons I chose this project is its practicality. A contact app is useful for everyone, and most people interact with such apps daily. I also wanted to learn useReducer, because it provides a simple and clean way to handle adding, editing, and deleting items.
